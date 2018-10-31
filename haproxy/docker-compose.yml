@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  haproxy:
+    image: 'haproxy'
+    ports:
+       - '7220:7220'
+       - '7221:7221'
+       - '7222:7222'
+       - '7224:7224'
+    volumes:
+       - /root/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
